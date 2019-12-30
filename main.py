@@ -20,4 +20,5 @@ from Clases.Tablero import Tablero
 
 puzzle = Tablero(2, 2)
 puzzle.cargar_piezas('Piezas.dat')
+puzzle.resolver()
 puzzle.guardar_resultado('Resultado.dat')
