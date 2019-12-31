@@ -44,11 +44,14 @@ class Hueco:
 				if self.lados[lado] != -1 and self.lados[lado] != pieza.lados[lado]:
 					break
 			else:
+				pieza.colocada = True
 				self.pieza_encajada = pieza
+				self.lados = pieza.lados
 				return True
 			pieza.rotar_horario()
 		else:
 			return False
 
 	def vaciar(self):
+		pieza_encajada.colocada = False
 		pieza_encajada = None

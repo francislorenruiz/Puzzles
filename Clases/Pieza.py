@@ -22,6 +22,7 @@ class Pieza:
 	los 4 lados de una pieza de puzzle. Dos piezas pueden unirse si
 	tienen el mismo número en alguno de sus lados."""
 	lados = {}
+	colocada = False
 
 	def __init__(self, lado_sup, lado_der, lado_inf, lado_izq):
 		self.lados = {

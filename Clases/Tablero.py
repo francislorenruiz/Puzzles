@@ -28,15 +28,19 @@ class Tablero:
 	n_columnas = int()
 
 	def __init__(self, ancho, alto):
-		self.huecos = [[Hueco(-1, -1, -1, -1)] * ancho] * alto
 		self.n_filas = alto
 		self.n_columnas = ancho
+		for i in range(self.n_filas):
+			self.huecos.append(list())
+			for j in range(self.n_columnas):
+				self.huecos[i].append(Hueco(-1, -1, -1, -1))
+
 		for i in range(alto):
 			self.huecos[i][0].lados['izq'] = 0
 			self.huecos[i][ancho - 1].lados['der'] = 0
-		for i in range(ancho):
-			self.huecos[0][i].lados['sup'] = 0
-			self.huecos[alto-1][i].lados['inf'] = 0
+		for j in range(ancho):
+			self.huecos[0][j].lados['sup'] = 0
+			self.huecos[alto-1][j].lados['inf'] = 0
 
 
 	def cargar_piezas(self, fichero):
@@ -51,7 +55,21 @@ class Tablero:
 
 
 	def resolver(self):
-		pass
+		for i in range(self.n_filas):
+			for j in range(self.n_columnas):
+				for pieza in self.piezas:
+					if pieza.colocada == False and self.huecos[i][j].encajar_pieza(pieza):
+						#Al encajar una nueva pieza actualizamos los huecos de alrededor con la
+						#nueva información.
+						if i < self.n_filas - 1:
+							self.huecos[i+1][j].lados['sup'] = self.huecos[i][j].lados['inf']
+						if j < self.n_columnas - 1:
+							self.huecos[i][j+1].lados['izq'] = self.huecos[i][j].lados['der']
+						break
+				else:
+					return False
+		else:
+			return True
 
 
 	def guardar_resultado(self, fichero):
