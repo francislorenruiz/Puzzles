@@ -20,5 +20,10 @@ from Clases.Tablero import Tablero
 
 puzzle = Tablero(2, 2)
 puzzle.cargar_piezas('Piezas.dat')
-puzzle.resolver()
+
+if puzzle.resolver():
+	print("¡Resuelto!")
+else:
+	print("No tiene solución.")
+
 puzzle.guardar_resultado('Resultado.dat')
