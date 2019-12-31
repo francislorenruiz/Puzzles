@@ -10,18 +10,19 @@ Dado un determinado tamaño de puzzle, se recogen los datos de las piezas de un 
   
 Por ejemplo, la siguiente pieza se representaría en el fichero:
 
-    ____1____
-   |         |
-   |         |
-  0|         |2                   --->  1 2 3 0
-   |         |
-   |_________|
-        3
+        0
+     _______
+    |       |                       
+  3 |       | 1                  -------> 0 1 2 3
+    |_______|
+        2
         
 Cabe destacar que las piezas pueden rotarse, pero no darse la vuelta.
 
 Se seguirán dos convenios para asegurar el correcto funcionamiento del programa:
+
   -Los bordes del puzzle se representarán siempre con el número cero.
+  
   -Cada unión es única, por lo que no podrá haber dos uniones con el mismo número (números que siempre serán enteros positivos).
   
 El puzzle ya montado se escribirá en otro fichero en el que las piezas seguirán el mismo formato que en el fichero de entrada (cada línea es una ficha y se compondrá de 4 números separados por espacios). La diferencia será que en este caso estarán rotadas y ordenadas por filas, de forma que la primera pieza será la de la esquina superior izquierda; la segunda será la que está a la derecha de la anterior; y así sucesivamente hasta acabar la fila, para posteriormente continuar con la primera de la siguiente fila.
