@@ -9,7 +9,9 @@ Dado un determinado tamaño de puzzle, se recogen los datos de las piezas de un 
   4º: Lado izquierdo.
   
 Por ejemplo, la siguiente pieza se representaría en el fichero:
-    ____1____
+
+        1
+    _________
    |         |
    |         |
   0|         |2                   --->  1 2 3 0
