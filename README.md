@@ -3,10 +3,10 @@ Resuelve puzzles de cualquier tamaño donde cada pieza se representa con 4 núme
 
 Dado un determinado tamaño de puzzle, se recogen los datos de las piezas de un fichero donde cada línea corresponderá a una pieza. Los 4 números deberán estar separados por un espacio y se cogerán de la siguiente forma:
 
-  1º: Lado superior.
-  2º: Lado derecho.
-  3º: Lado inferior.
-  4º: Lado izquierdo.
+    1º: Lado superior.
+    2º: Lado derecho.
+    3º: Lado inferior.
+    4º: Lado izquierdo.
   
 Por ejemplo, la siguiente pieza se representaría en el fichero:
 
