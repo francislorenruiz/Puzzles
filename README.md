@@ -12,7 +12,7 @@ Por ejemplo, la siguiente pieza se representaría en el fichero:
 
        ___0___
       |       |                       
-    3 |       | 1                  -------> 0 1 2 3
+    3 |   A   | 1                  -------> 0 1 2 3
       |_______|
           2
         
