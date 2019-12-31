@@ -10,8 +10,7 @@ Dado un determinado tamaño de puzzle, se recogen los datos de las piezas de un 
   
 Por ejemplo, la siguiente pieza se representaría en el fichero:
 
-        1
-    _________
+    ____1____
    |         |
    |         |
   0|         |2                   --->  1 2 3 0
