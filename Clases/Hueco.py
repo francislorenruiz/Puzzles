@@ -1,5 +1,5 @@
 """
-Copyright 2019 Francisco Lorente Ruiz.
+Copyright 2020 Francisco Lorente Ruiz.
     This file is part of Puzzles.
 
     This program is free software: you can redistribute it and/or modify
@@ -45,13 +45,20 @@ class Hueco:
 					break
 			else:
 				pieza.colocada = True
+				self.lados = dict(pieza.lados)
 				self.pieza_encajada = pieza
-				self.lados = pieza.lados
 				return True
 			pieza.rotar_horario()
 		else:
 			return False
 
 	def vaciar(self):
-		pieza_encajada.colocada = False
-		pieza_encajada = None
+		self.pieza_encajada.colocada = False
+		self.pieza_encajada = None
+		#Al vaciar un hueco los lados inferior y derecho ya no se conocen, pero
+		#los otros aún sí, mientras no se quiten las piezas correspondientes.
+		if self.lados['der'] != 0: #Sólo se cambia si no son el borde del puzzle
+			self.lados['der'] = -1
+		if self.lados['inf'] != 0:
+			self.lados['inf'] = -1
+

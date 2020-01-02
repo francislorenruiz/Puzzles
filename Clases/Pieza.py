@@ -1,5 +1,5 @@
 """
-Copyright 2019 Francisco Lorente Ruiz.
+Copyright 2020 Francisco Lorente Ruiz.
     This file is part of Puzzles.
 
     This program is free software: you can redistribute it and/or modify
@@ -23,6 +23,7 @@ class Pieza:
 	tienen el mismo número en alguno de sus lados."""
 	lados = {}
 	colocada = False
+	pos_en_lista = 0
 
 	def __init__(self, lado_sup, lado_der, lado_inf, lado_izq):
 		self.lados = {

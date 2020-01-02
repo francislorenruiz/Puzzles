@@ -1,5 +1,5 @@
 """
-Copyright 2019 Francisco Lorente Ruiz.
+Copyright 2020 Francisco Lorente Ruiz.
     This file is part of Puzzles.
 
     This program is free software: you can redistribute it and/or modify
@@ -18,7 +18,8 @@ Copyright 2019 Francisco Lorente Ruiz.
 
 from Clases.Tablero import Tablero
 
-puzzle = Tablero(2, 2)
+#El ejemplo es un puzzle 3x3
+puzzle = Tablero(3, 3)
 puzzle.cargar_piezas('Piezas.dat')
 
 if puzzle.resolver():
@@ -27,3 +28,4 @@ else:
 	print("No tiene solución.")
 
 puzzle.guardar_resultado('Resultado.dat')
+
